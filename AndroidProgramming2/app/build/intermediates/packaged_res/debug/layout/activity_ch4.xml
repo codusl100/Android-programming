@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text1"
+        android:text="현재 사용중인 안드로이드 버전은?"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/radio_marshmellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marshmellow 6"/>
+        <RadioButton
+            android:id="@+id/radio_nouga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouga 7"/>
+        <RadioButton
+            android:id="@+id/radio_Oreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oreo 8"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/displayimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DISPLAY IMAGE"
+        android:onClick="onButtonClicked"/>
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:maxHeight="300dp"
+        android:src="@drawable/img6"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:maxHeight="300dp"
+        android:src="@drawable/img7"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/img3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="300dp"
+        android:maxHeight="300dp"
+        android:src="@drawable/img8"
+        android:visibility="gone"/>
+</LinearLayout>
