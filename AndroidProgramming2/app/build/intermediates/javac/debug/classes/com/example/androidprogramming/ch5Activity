@@ -1,0 +1,36 @@
+package com.example.AndroidProgramming;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class ch5Activity extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+    public void onRadioButtonClicked(View view){
+        EditText input = findViewById(R.id.input);
+        RadioButton radio1 = findViewById(R.id.radio1);
+        RadioButton radio2 = findViewById(R.id.radio2);
+        Button result = findViewById(R.id.button);
+        Float temp1 = Float.parseFloat(input.getText().toString()); // 놓친 부분 -> 정수로 변환해주는 거! 일반 EditText에선 int 계산 못함
+        Float temp2 = 0.0f;
+        if(radio1.isChecked()){
+            temp2 = temp1 / 33.8f;
+            input.setText(temp2.toString());
+        }
+        else if(radio2.isChecked()){
+            temp2 = temp1 * 33.8f;
+            input.setText(temp2.toString());
+        }
+        else{
+            input.setText(temp2.toString());
+        }
+    }
+}
